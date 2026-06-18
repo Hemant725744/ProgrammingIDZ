@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="GameScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/Screens/GameScreen.brs" />
+    <interface>
+        <field id="activeScreen" type="string" alwaysNotify="true" />
+    </interface>
+    <children>
+        <Poster uri="pkg:/images/game_bg.jpg" width="1280" height="720" />
+        
+        <Poster id="cloud2a" uri="pkg:/images/cloud_2.jpg" width="320" height="140" translation="[400, 120]" loadDisplayMode="scaleToFit" />
+        <Poster id="cloud2b" uri="pkg:/images/cloud_2.jpg" width="320" height="140" translation="[1100, 120]" loadDisplayMode="scaleToFit" />
+
+        <Poster id="cloud1a" uri="pkg:/images/cloud_1.jpg" width="220" height="100" translation="[100, 30]" loadDisplayMode="scaleToFit" />
+        <Poster id="cloud1b" uri="pkg:/images/cloud_1.jpg" width="220" height="100" translation="[850, 30]" loadDisplayMode="scaleToFit" />
+        
+        <Poster id="obstacleBox" uri="pkg:/images/ob1.jpg" width="90" height="150" translation="[1280, 450]" loadDisplayMode="scaleToFit" loadSync="true" />
+        
+        <Poster id="coinBox" uri="pkg:/images/coin.jpg" width="40" height="40" translation="[1500, 400]" loadDisplayMode="scaleToFit" loadSync="true" />
+
+        <Poster id="playerBox" uri="pkg:/images/dinorun/f1.jpg" width="220" height="130" translation="[200, 470]" loadDisplayMode="scaleToFit" loadSync="true" />
+        
+        <Label id="scoreLabel" text="SCORE: 0" width="300" height="50" translation="[950, 30]" color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
+
+        <Timer id="gameTimer" duration="0.016" repeat="true" />
+        <GameOverPopup id="popup" visible="false" />
+    </children>
+</component>
