@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="GameOverPopup" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/Popups/GameOverPopup.brs" />
+    <interface>
+        <field id="action" type="string" alwaysNotify="true" />
+    </interface>
+    <children>
+        <Rectangle width="1280" height="720" color="0x000000AA" />
+        <Rectangle width="400" height="300" color="0x333333FF" translation="[440, 210]" />
+        <Label text="YOU LOST!" width="400" height="50" translation="[440, 230]" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
+        <Group translation="[540, 290]">
+            <Rectangle id="btnRestart" width="200" height="60" color="0xFF4D4DFF" />
+            <Label text="RESTART" width="200" height="60" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" font="font:MediumSystemFont" />
+        </Group>
+        <Group translation="[540, 370]">
+            <Rectangle id="btnHome" width="200" height="60" color="0x1E5631FF" />
+            <Label text="HOME" width="200" height="60" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" font="font:MediumSystemFont" />
+        </Group>
+    </children>
+</component>

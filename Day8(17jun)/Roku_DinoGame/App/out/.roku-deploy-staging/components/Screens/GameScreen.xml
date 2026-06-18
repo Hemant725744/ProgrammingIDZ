@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="GameScreen" extends="Group" focusable="true">
+
+    <script type="text/brightscript" uri="pkg:/components/Screens/GameScreen.brs" />
+
+    <interface>
+        <field id="activeScreen" type="string" alwaysNotify="true" />
+    </interface>
+
+    <children>
+        <Poster uri="pkg:/images/game_bg.jpg" width="1280" height="720" />
+
+        <Rectangle width="1280" height="10" color="0x000000FF" translation="[0, 600]" />
+
+        <Poster id="playerBox" uri="pkg:/images/dino.jpg" width="100" height="100" translation="[200, 500]" />
+
+        <Rectangle id="obstacleBox" width="50" height="80" color="0x8B4513FF" translation="[1280, 500]" />
+
+        <Timer id="gameTimer" duration="0.016" repeat="true" />
+
+        <GameOverPopup id="popup" visible="false" />
+    </children>
+
+</component>

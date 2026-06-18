@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="homescreen" extends="Group">
+
+    <script type="text/brightscript" uri="pkg:/components/ScreenLogic/HomeScreenLogic.brs" />
+
+    <children>
+        <Rectangle 
+            id="myRedBox" 
+            width="400" 
+            height="200" 
+            color="0xFF0000FF" 
+            translation="[100, 100]" 
+        />
+    </children>
+
+</component>

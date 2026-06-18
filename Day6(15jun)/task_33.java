@@ -1,4 +1,4 @@
-package Day6;
+package Day5;
 
 import java.util.Scanner;
 
@@ -23,6 +23,5 @@ public class task_33 {
 
             System.out.println(count + "/" + (N * M));
         }
-        s.close();
     }
 }
