@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ShopScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/Screens/ShopScreen.brs" />
+    
+    <interface>
+        <field id="activeScreen" type="string" alwaysNotify="true" />
+    </interface>
+
+    <children>
+        <Rectangle width="1280" height="720" color="0x222222FF" />
+        
+        <LayoutGroup layoutDirection="horiz" translation="[140, 260]" itemSpacing="50">
+            <Rectangle width="200" height="200" color="0xFFFFFFFF" />
+            <Rectangle width="200" height="200" color="0xFFFFFFFF" />
+            <Rectangle width="200" height="200" color="0xFFFFFFFF" />
+            <Rectangle width="200" height="200" color="0xFFFFFFFF" />
+        </LayoutGroup>
+    </children>
+</component>
