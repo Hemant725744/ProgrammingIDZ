@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/Screens/HomeScreen.brs" />
+    <interface>
+        <field id="activeScreen" type="string" alwaysNotify="true" />
+    </interface>
+    <children>
+        <Poster id="background" uri="pkg:/images/jungle_bg.jpg" width="1280" height="720" />
+        
+        <Group id="playGroup" translation="[490, 380]">
+            <Rectangle id="playBtn" width="300" height="80" color="0xFFD700FF" />
+            <Label text="PLAY" width="300" height="80" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
+        </Group>
+        
+        <Group id="shopGroup" translation="[490, 490]">
+            <Rectangle id="shopBtn" width="300" height="80" color="0x4B0082FF" />
+            <Label text="SHOP" width="300" height="80" horizAlign="center" vertAlign="center" color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
+        </Group>
+    </children>
+</component>
