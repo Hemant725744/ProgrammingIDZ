@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ShooterModule" extends="Group">
+    <interface>
+        <function name="setupUI" />
+        <function name="handleInput" />
+    </interface>
+    
+    <script type="text/brightscript" uri="pkg:/components/GameLogic/ShooterModule.brs" />
+    
+    <children>
+        <Timer id="gameLoop" duration="0.016" repeat="true" control="start" />
+    </children>
+</component>

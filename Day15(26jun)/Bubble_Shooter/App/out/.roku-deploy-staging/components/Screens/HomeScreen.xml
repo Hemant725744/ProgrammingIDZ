@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/Screens/HomeScreen.brs" />
+    
+    <interface>
+        <field id="activeScreen" type="string" alwaysNotify="true" />
+    </interface>
+
+    <children>
+        <Poster id="bgImage" uri="pkg:/images/bubble_bg.jpg" width="1280" height="720" />
+        <Rectangle id="dividerLine" width="1280" height="4" color="0xFF0000FF" translation="[0, 500]" />
+
+        
+        <Group id="shooterGroup" translation="[640, 620]">
+            <Poster id="arrow" uri="pkg:/images/arrow.jpg" width="40" height="110" translation="[-20, -60]" />
+            <Poster id="ball" uri="pkg:/images/ball.jpg" width="60" height="60" translation="[-30, -30]" />
+        </Group>
+        
+        <GridManager id="gridManager" translation="[40, 20]" />
+
+        <Label id="scoreLabel" text="SCORE: 0" color="0xFFFFFFFF" font="font:MediumBoldSystemFont" translation="[400, 635]" />
+        <Label id="nextLabel" text="NEXT" color="0xFFFFFFFF" font="font:MediumBoldSystemFont" translation="[760, 635]" />
+        <Poster id="nextBall" uri="pkg:/images/ball.jpg" width="40" height="40" translation="[840, 630]" />
+
+        <Group id="lineContainer" translation="[0,0]" />
+
+    </children>
+</component>
