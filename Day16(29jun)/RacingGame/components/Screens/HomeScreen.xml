@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/Screens/HomeScreen.brs" />
+    
+    <interface>
+        <field id="activeScreen" type="string" alwaysNotify="true" />
+    </interface>
+
+    <children>
+        
+        <!-- <Rectangle id="dividerLine" width="199" height="720" color="0xFF0000FF" translation="[0, 0]"/>
+        <Rectangle id="dividerLine" width="188" height="720" color="0xFFffff99" translation="[199, 0]"/>
+        <Rectangle id="dividerLine" width="378" height="720" color="0xffff3399" translation="[387, 0]"/>
+        <Rectangle id="dividerLine" width="188" height="720" color="0xff00ff00" translation="[765, 0]"/>
+        <Rectangle id="dividerLine" width="327" height="720" color="0xff00ffcc" translation="[953, 0]"/> -->
+
+        <!-- <Poster id="gpsComponent" uri="pkg:/images/gps.jpg" width="199" height="720" translation="[0, 0]" />
+
+        <Group id="leftSideScroller" translation="[199, 0]">
+            <Poster id="leftObsLoop" uri="pkg:/images/sideobs/leftobs.jpg" width="188" height="720" translation="[0, -720]" />
+            <Poster id="leftStart" uri="pkg:/images/sideobs/startleft.jpg" width="188" height="720" translation="[0, 0]" />
+        </Group>
+
+        <Group id="centerRoadScroller" translation="[387, 0]">
+            <Poster id="roadLoop1" uri="pkg:/images/road/Striproad.jpg" width="378" height="720" translation="[0, 0]" />
+            <Poster id="roadLoop2" uri="pkg:/images/road/road.jpg" width="378" height="720" translation="[0, -720]" />
+        </Group>
+
+        <Group id="rightSideScroller" translation="[765, 0]">
+            <Poster id="rightObsLoop" uri="pkg:/images/sideobs/rightobs.jpg" width="188" height="720" translation="[0, -720]" />
+            <Poster id="rightStart" uri="pkg:/images/sideobs/startright.jpg" width="188" height="720" translation="[0, 0]" />
+        </Group>
+
+        <Group id="progressTracker" translation="[953, 0]">
+            <Rectangle width="327" height="720" color="0x222222FF" />
+            
+            <Label id="speedLabel" text="Speed: 0" translation="[20, 100]" color="0xFFFFFFFF" font="font:MediumBoldSystemFont" />
+            <Label id="fuelLabel" text="Fuel: 100" translation="[20, 200]" color="0xFFFFFFFF" font="font:MediumBoldSystemFont" />
+            
+            <Label id="gameOverLabel" text="GAME OVER" translation="[40, 350]" color="0xFF0000FF" visible="false" font="font:LargeBoldSystemFont" />
+        </Group> -->
+
+        <Label id="startLabel" text="PRESS OK TO START" translation="[500, 350]" color="0xFFFFFFFF" font="font:LargeBoldSystemFont" />
+
+        <Poster id="gpsComponent" uri="pkg:/images/gps.jpg" width="199" height="720" translation="[0, 0]" />
+
+        <Group id="leftSideScroller" translation="[199, 0]">
+            <Poster id="leftObsLoop" uri="pkg:/images/sideobs/leftobs.jpg" width="188" height="720" translation="[0, -720]" />
+            <Poster id="leftStart" uri="pkg:/images/sideobs/startleft.jpg" width="188" height="720" translation="[0, 0]" />
+        </Group>
+
+        <Group id="centerRoadScroller" translation="[387, 0]">
+            <Poster id="roadLoop2" uri="pkg:/images/road/road.jpg" width="378" height="720" translation="[0, -720]" />
+            <Poster id="roadLoop1" uri="pkg:/images/road/Striproad.jpg" width="378" height="720" translation="[0, 0]" />
+
+            <Group id="obstaclesGroup">
+                <Group id="obs1" translation="[50, -150]">
+                    <Poster id="obs1Image" uri="pkg:/images/cars/car1.jpg" width="40" height="80" />
+                    <Rectangle id="obs1Hitbox" width="30" height="70" translation="[5, 5]" color="0xFF000088" visible="false" />
+                </Group>
+                <Group id="obs2" translation="[250, -600]">
+                    <Poster id="obs2Image" uri="pkg:/images/cars/truck.jpg" width="45" height="90" />
+                    <Rectangle id="obs2Hitbox" width="35" height="80" translation="[5, 5]" color="0xFF000088" visible="false" />
+                </Group>
+            </Group>
+
+            <Group id="playerCarGroup" translation="[169, 600]">
+                <Poster id="playerCarImage" uri="pkg:/images/cars/maincar.jpg" width="40" height="80" rotationPivot="[20, 40]">
+                    <Animation id="spinAnim" duration="0.5" repeatCount="0" control="stop">
+                        <FloatFieldInterpolator id="spinInterp" key="[0.0, 1.0]" keyValue="[0.0, 6.28318]" fieldToInterp="playerCarImage.rotation" />
+                    </Animation>
+                </Poster>
+                <Rectangle id="playerHitbox" width="26" height="66" translation="[7, 7]" color="0x00FF0088" visible="false" />
+            </Group>
+
+            <Poster id="explosionSprite" uri="pkg:/images/blasting/f1.jpg" width="80" height="80" visible="false" />
+            
+            <Label id="gameOverLabel" text="GAME OVER" translation="[90, 350]" color="0xFF0000FF" visible="false" font="font:LargeBoldSystemFont" />
+        </Group>
+
+        <Group id="rightSideScroller" translation="[765, 0]">
+            <Poster id="rightObsLoop" uri="pkg:/images/sideobs/rightobs.jpg" width="188" height="720" translation="[0, -720]" />
+            <Poster id="rightStart" uri="pkg:/images/sideobs/startright.jpg" width="188" height="720" translation="[0, 0]" />
+        </Group>
+
+        <Group id="progressTracker" translation="[953, 0]">
+            <Rectangle width="327" height="720" color="0x222222FF" />
+            <Label id="speedLabel" text="Speed: 0" translation="[20, 100]" color="0xFFFFFFFF" font="font:MediumBoldSystemFont" />
+            <Label id="fuelLabel" text="Fuel: 100" translation="[20, 200]" color="0xFFFFFFFF" font="font:MediumBoldSystemFont" />
+        </Group> 
+
+        <Timer id="gameTimer" repeat="true" duration="0.016" /> 
+        <Timer id="explosionTimer" repeat="true" duration="0.1" control="stop" />
+    </children>
+</component>
